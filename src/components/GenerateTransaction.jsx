@@ -2,8 +2,8 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 const GenerateTransaction = () => {
-  const [description, setDescription] = useState();
-  const [transactionAmount, setTransactionAmount] = useState();
+  const [description, setDescription] = useState("");
+  const [transactionAmount, setTransactionAmount] = useState(0);
 
   // const [text, setText] = useState("");
   // const [amount, setAmount] = useState(0);
@@ -24,7 +24,7 @@ const GenerateTransaction = () => {
   return (
     <div>
       <h3>New Transaction</h3>
-      <form onClick={submit}>
+      <form onSubmit={submit}>
         <div className="form-control">
           <label htmlFor="description"></label>
           <input
