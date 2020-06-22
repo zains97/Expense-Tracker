@@ -42,7 +42,7 @@ const GenerateTransaction = () => {
             placeholder="Enter transaction amount"
             id="transaction-amount"
             value={transactionAmount}
-            onChange={(e) => setTransactionAmount(e.target.value)}
+            onChange={(e) => setTransactionAmount(parseInt(e.target.value))}
           />
         </div>
         <button className="btn">Add Trasaction</button>
